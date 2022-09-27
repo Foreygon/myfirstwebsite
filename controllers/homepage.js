@@ -13,7 +13,16 @@ const path = "/";
 // def du controller de la page
 const controller = (request, response) => {
     
-    response.render('homepage');
+    let username = "Bobby";
+
+    let fruits = ["Pomme", "Poire", "Banane"]
+
+    // response.render('nom de la vue', obj de donnée)
+    response.render('homepage', {
+        username: username,
+        fruits: fruits
+
+    });
 } ;
 
 // ajout de la def de la page au registr de routage de Express

@@ -28,6 +28,7 @@ const port = 3000;
 // le module "ejs", transmet à Express ses param avec le propiété "__express"
 app.engine('.html', ejs.__express);
 
+// homepage
 
 // def du rep de stokage du fichier de vues
 // path.join() va resoudre auto le chemin abs du rep "views"
@@ -36,9 +37,14 @@ app.set('views', path.join(__dirname,"views"))
 app.set('view engine', 'html');
 
 
+// contact
+
+
 // routing
 // --
 app.use("/", require('./controllers/homepage'));
+app.use("/", require('./controllers/contact'));
+app.use("/", require('./controllers/about'));
 
 // start server app
 // --
