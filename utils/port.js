@@ -13,7 +13,7 @@ module.exports = function()
 // recup du num de port attribué par net
     let port = server.address().port;
 // ferme le serveur
-    server.close;
+    server.close();
 // retourne le numero de port
     return port;
 
