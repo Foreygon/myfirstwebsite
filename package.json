@@ -1,0 +1,26 @@
+{
+  "name": "my-first-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Foreygon/myfirstwebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Foreygon/myfirstwebsite/issues"
+  },
+  "homepage": "https://github.com/Foreygon/myfirstwebsite#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "node-port-check": "^2.0.1"
+  }
+}
