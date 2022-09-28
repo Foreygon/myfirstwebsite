@@ -42,9 +42,10 @@ app.set('view engine', 'html');
 
 // routing
 // --
-app.use("/", require('./controllers/homepage'));
-app.use("/", require('./controllers/contact'));
-app.use("/", require('./controllers/about'));
+app.use(require('./controllers/homepage'));
+app.use(require('./controllers/about'));
+app.use(require('./controllers/contact'));
+
 
 // start server app
 // --
