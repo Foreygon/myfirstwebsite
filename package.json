@@ -1,5 +1,5 @@
 {
-  "name": "my-first-website",
+  "name": "myfirstwebsite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,20 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Foreygon/myfirstwebsite.git"
+    "url": "git+https://github.com/support-de-cours/1582-my-first-website.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Foreygon/myfirstwebsite/issues"
+    "url": "https://github.com/support-de-cours/1582-my-first-website/issues"
   },
-  "homepage": "https://github.com/Foreygon/myfirstwebsite#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
+  "homepage": "https://github.com/support-de-cours/1582-my-first-website#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "node-port-check": "^2.0.1"
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
