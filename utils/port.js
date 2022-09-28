@@ -1,21 +1,22 @@
-'use strict';
+"use strict";
 
-
-const net =require('net');
+const net = require('net');
 
 module.exports = function() 
 {
-//creation du serveur avec le module "net"
+    // Creation d'un serveur avec le module "net"
     const server = net.createServer();
-// demarrage du server sur le port "0"
-// port 0 exist pas le module net va rechercher un port dispo
+
+    // Démarrage du serveur sur le port 0
+    // Le port 0 n'existant pas, le module "net" va rechercher un port disponible
     server.listen(0);
-// recup du num de port attribué par net
-    let port = server.address().port;
-// ferme le serveur
+
+    // Recupération du numéro de port attribué par le module "net"
+    const port = server.address().port;
+    
+    // Fermeture du serveur
     server.close();
-// retourne le numero de port
+
+    // Retourne le numéro de Port
     return port;
-
-
 }

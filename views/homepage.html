@@ -1,13 +1,18 @@
 <%- include('./_header.html') -%>
-<!-- =============== -->
+<!-- ======================================================================= -->
 
-    <h1>Hello html</h1>
+    <h1>Hello HTML</h1>
+
     Username: <%= username %>
 
-    <% for (let fruit of fruits) {%>
-        <div>
-            <strong>Fruit: </strong> <%= fruit %>
-        </div>
+    <hr>
+
+    <% for (let fruit of fruits) { %>
+    <div>
+        <strong>Fruit : </strong> <%= fruit %>
+    </div>
     <% } %>
-<!-- ===================== -->
+
+<!-- ======================================================================= -->
+
 <%- include('./_footer.html') -%>

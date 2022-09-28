@@ -1,29 +1,28 @@
 "use strict";
 
-//appel des module
+// Appel des modules
 const express = require('express');
 const router = express.Router();
 
-// page def
+
+
+// Page definition
 // --
 
-// def du chemin de la page
+// Definition du chemin de la page
 const path = "/contact";
 
-// def du controller de la page
+// Definition du controller de la page
 const controller = (request, response) => {
-    
 
+    response.render('contact', {});
+};
 
-    // response.render('nom de la vue', obj de donnée)
-    response.render('contact', {
-
-    });
-} ;
-
-// ajout de la def de la page au registr de routage de Express
+// Ajout de la definition de la page au registre de routage de Express
 router.get(path, controller);
 
-// module export
+
+// Module export
 // --
+
 module.exports = router;

@@ -6,50 +6,54 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-
-
-// import
-const guessPort = require('./utils/port')
+const guessPort = require('./utils/port');
 // const port = guessPort();
 const port = 3000;
 
-// console.log( port );
 
-
-// app settings
+// App Setup 
 // --
 
-
-// app setup
-// --
-
-// def du moteur de rendu
-// on precise à Express que le moeur de rendu se fera avec le moeur d'EJS
-// le module "ejs", transmet à Express ses param avec le propiété "__express"
+// Definition du moteur de rendu,
+// On precise à Express que le moteur de rendu des vues se fera avec le module "ejs"
+// Le module "ejs", transmet à Express ses paramètres avec la propriete "__express"
 app.engine('.html', ejs.__express);
 
-// homepage
+// Définition du répertoire de stockage des fichiers de vues
+// path.join() va resoudre automatiquement le chemin absolut du repertoire "views"
+app.set('views', path.join(__dirname, "views"));
 
-// def du rep de stokage du fichier de vues
-// path.join() va resoudre auto le chemin abs du rep "views"
-app.set('views', path.join(__dirname,"views"))
 
+// Utilisation du moteur de rendu HTML
 app.set('view engine', 'html');
 
+// Ajoute l'accès au répertoire "public"
+app.use( express.static( path.join(__dirname, "public") ) );
 
-// contact
 
 
-// routing
+// Routing
 // --
+
 app.use(require('./controllers/homepage'));
 app.use(require('./controllers/about'));
 app.use(require('./controllers/contact'));
 
+// Création de la page 404
+app.use(function(req, res){
+    res.status(404);
+    res.render('404', { 
+        host: req.hostname,
+        url: req.url 
+    })
+});
 
-// start server app
+
+
+
+// Start server App
 // --
 
 app.listen(port , () => {
     console.log("App listening on port", port);
-})
+});
